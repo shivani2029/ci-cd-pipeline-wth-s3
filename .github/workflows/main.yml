@@ -21,7 +21,7 @@ jobs:
 
       - name: Upload cat.png to S3
         run: |
-          aws s3 cp ./Download/pipeline/ci-cd-pipeline-wth-s3/picture/cat.png s3://my-github-actions-bucket/
+          aws s3 cp ./Downloads/pipeline/ci-cd-pipeline-wth-s3/picture/cat.png s3://my-github-actions-bucket/
 
   download-from-s3:
     runs-on: ubuntu-latest
@@ -36,5 +36,5 @@ jobs:
 
       - name: Download cat.png from S3 to specified folder
         run: |
-          mkdir -p ./Download/pipeline/ci-cd-pipeline-wth-s3/picture/
-          aws s3 cp s3://my-github-actions-bucket/cat.png ./Download/pipeline/ci-cd-pipeline-wth-s3/picture/cat.png
+          mkdir -p ./Downloads/pipeline/ci-cd-pipeline-wth-s3/picture/
+          aws s3 cp s3://my-github-actions-bucket/cat.png ./Downloads/pipeline/ci-cd-pipeline-wth-s3/picture/cat.png
