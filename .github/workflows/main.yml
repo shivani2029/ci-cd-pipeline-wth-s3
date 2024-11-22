@@ -21,7 +21,7 @@ jobs:
 
       - name: Upload cat.png to S3
         run: |
-          aws s3 cp ./picture/cat.png s3://my-github-actions-bucket/
+          aws s3 cp ./picture/cat.png s3://shivanibuk/
 
 
   download-from-s3:
@@ -38,4 +38,4 @@ jobs:
       - name: Download cat.png from S3 to specified folder
         run: |
           mkdir -p ./picture
-          aws s3 cp s3://my-github-actions-bucket/cat.png ./picture/cat.png
+          aws s3 cp s3://shivanibuk/cat.png ./picture/cat.png
